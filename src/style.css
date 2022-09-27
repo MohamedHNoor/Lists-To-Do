@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  font-family: 'Helvetica', sans-serif;
+  color: #777;
+}
+
+.main {
+  box-shadow: 1px 6px 17px -3px rgb(34, 60, 80, 19%);
+  width: 50%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  padding: 20px 12px;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.inputList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  padding: 20px 12px;
+  font-size: 17px;
+}
+
+.chexboxSpan {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.fa-trash {
+  display: none;
+}
+
+.fa-solid {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.checkbox {
+  font-size: 20px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  background-color: #eee;
+  color: #888;
+  padding: 20px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
