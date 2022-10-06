@@ -22,7 +22,7 @@ const addToDo = (item) => {
       index: Number
     };
     todo.description = item;
-    todo.index = data.length;
+    todo.index = data.length + 1;
     data.push(todo);
     addToLocalStorage(data);
     userInput.value = '';
@@ -72,7 +72,7 @@ const deletTask = (task) => {
     data.splice(task.parentElement.index, 1);
   }
   data.forEach((task, index) => {
-    task.index = index;
+    task.index = index + 1;
   });
   localStorage.setItem('data', JSON.stringify(data));
 };
