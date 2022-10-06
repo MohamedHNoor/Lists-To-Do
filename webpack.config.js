@@ -1,21 +1,29 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, './src/index.js'),
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+  entry: {
+    index: './src/index.js',
+    function: './src/function.js',
   },
+  devtool: 'inline-source-map',
   devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
-    },
-    open: true,
-    hot: true,
-    compress: true,
+    static: './dist',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'lists-to-do',
+      template: './src/template.html',
+    }),
+  ],
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
   module: {
     rules: [
@@ -25,10 +33,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Lists To Do',
-      template: 'src/template.html',
-    }),
-  ],
 };

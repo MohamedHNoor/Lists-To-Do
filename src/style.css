@@ -26,14 +26,27 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+.inputcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
 .input {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #ddd;
   outline: none;
   padding: 20px 12px;
   font-size: 17px;
   font-style: italic;
+}
+
+.inputcontainer span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-right: 10px;
+  cursor: pointer;
 }
 
 .inputList {
@@ -42,20 +55,32 @@ body {
   align-items: center;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #ddd;
   outline: none;
   padding: 20px 12px;
   font-size: 17px;
 }
 
-.chexboxSpan {
+.listContainer div {
   display: flex;
-  gap: 20px;
-  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ddd;
 }
 
-.fa-trash {
-  display: none;
+.editedList {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  font-size: 17px;
+  font-style: italic;
+  background-color: #fffed3;
+}
+
+p {
+  flex: 2;
+  padding: 10px 12px;
 }
 
 .fa-solid {
@@ -75,4 +100,8 @@ body {
   padding: 20px 0;
   font-size: 18px;
   cursor: pointer;
+}
+
+.bgColor {
+  background-color: #fffed3;
 }
