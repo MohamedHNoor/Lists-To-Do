@@ -2,10 +2,10 @@
   "name": "lists-to-do",
   "version": "1.0.0",
   "description": "In this project, I built a simple HTML list of To Do tasks. The web page was built using webpack and served by a webpack dev server",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve"
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,9 @@
     "url": "https://github.com/MohamedHNoor/Lists-To-Do/issues"
   },
   "homepage": "https://github.com/MohamedHNoor/Lists-To-Do#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",

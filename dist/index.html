@@ -9,18 +9,25 @@
       crossorigin="anonymous"
     ></script>
     <title>Lists To DO</title>
-  <script defer src="main.js"></script></head>
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="function.bundle.js"></script></head>
   <body>
     <section class="main">
       <div class="header">
         <h1 class="heading">To Do Lists</h1>
         <i class="fa-solid fa-rotate"></i>
       </div>
-      <form action="">
-        <div class="inputcontainer">
-          <input type="text" class="input" placeholder="Add your list..." />
+      <form action="" id="form">
+        <div id="inputcontainer" class="inputcontainer">
+          <input
+            type="text"
+            class="input"
+            id="userInput"
+            placeholder="Add your list..."
+          />
+          <span>&#8629;</span>
         </div>
-        <div class="listContainer"></div>
+        <div class="listContainer" id="userTasks"> 
+        </div>
         <button type="button" class="btn">Clear all completed</button>
       </form>
     </section>
